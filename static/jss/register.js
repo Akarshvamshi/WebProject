@@ -16,27 +16,32 @@ let makeInVisible=()=>{
     element1.style.display="none";
 }
 
-let form=document.getElementById("login-form")
+let form=document.getElementById("login-form");
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
+    let name=document.getElementById("name").value;
     let email=document.getElementById("email").value;
     let password=document.getElementById("password").value;
-
-    let user=localStorage.getItem(email);
-
-    if(user){
-        var parsedData=JSON.parse(user);
-        if(parsedData.password==password){
-            alert("login sucessfull");
-            localStorage.setItem("user",JSON.stringify(user));
-            window.location.href="home.html";
-        }
-        else{
-            alert("password wrong");
-        }
+    let confirmPassword=document.getElementById("confirmPassword").value;
+    if(name === "" || email === "" || password==="") {
+        alert("enter all the details");
+        return;
     }
+    if(password!= confirmPassword) alert("password is not same");
     else{
-        alert("user not found");
+
+        let user={
+            name:name,
+            email:email,
+            password:password,
+        };
+
+        localStorage.setItem(email,JSON.stringify(user));
+        alert("reister successfull please login");
+        window.location.href="login.html"
     }
+
+
+    
 })
