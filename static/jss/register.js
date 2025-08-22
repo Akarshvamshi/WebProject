@@ -28,8 +28,15 @@ form.addEventListener("submit",(e)=>{
         alert("enter all the details");
         return;
     }
-    if(password!= confirmPassword) alert("password is not same");
+    if(password != confirmPassword) alert("password is not same");
     else{
+
+        let userdata=localStorage.getItem(email);
+        if(userdata){
+            alert("User already exist")
+            window.location.href="login.html";
+            return;
+        }
 
         let user={
             name:name,
@@ -45,3 +52,18 @@ form.addEventListener("submit",(e)=>{
 
     
 })
+
+
+
+
+// form.addEventListener('submit',(e)=>{
+//     e.preventDefault();
+
+//     if(firstname_input==""){
+//         displayerror("first name required");
+//     }
+// })
+
+// function displayerror(error){
+//     document.getElementById("div").textContent=error;
+// }

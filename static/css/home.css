@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(135deg,#8052ec,#d161ff);
+}
+
+#sec1{
+    border: 2px solid white;
+    width: 40%;
+    position: absolute;
+    top:15%;
+    /* left: 50%; */
+    left: 30%;
+    padding: 30px 40px;
+}
+
+#form{
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+
+    input{
+        width: 70%;
+        height: 25px;
+        font-size: 15px;
+        border: 2px solid #d1d3d4;
+        padding: 12px;
+        color: #111111;
+        position: relative;
+    }
+    input:focus{
+        outline: none;
+        border-color: #8052ec;
+    }
+    button{
+        position: relative;
+        float: right;
+        width: 20%;
+        height: 45px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #8052ec;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
+
+#tasks{
+    background-color: white;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius:10px ;
+    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+    position: relative;
+}
+
+#tasks{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+}
+#tasks div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid; */
+    
+    p{
+        font-size: larger;
+    }
+
+    button{
+        height: 30px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #8052ec;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}
+
+#h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logout{
+    position: absolute;
+    right:100px;
+    top: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgb(231, 190, 190);
+    color:red;
+    
+}
+#logout:hover{
+    background-color: black;
+    color: white;
+}

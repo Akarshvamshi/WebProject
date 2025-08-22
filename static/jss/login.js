@@ -29,7 +29,7 @@ form.addEventListener("submit",(e)=>{
         var parsedData=JSON.parse(user);
         if(parsedData.password==password){
             alert("login sucessfull");
-            localStorage.setItem("user",JSON.stringify(user));
+            localStorage.setItem("user",user);
             window.location.href="home.html";
         }
         else{
@@ -37,6 +37,6 @@ form.addEventListener("submit",(e)=>{
         }
     }
     else{
-        alert("user not found");
+        alert("user not found check the email");
     }
 })
